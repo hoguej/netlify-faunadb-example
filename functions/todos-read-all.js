@@ -6,6 +6,7 @@ const q = faunadb.query
 exports.handler = (event, context) => {
   console.log('Function `todo-read-all` invoked')
   /* configure faunaDB Client with our secret */
+  console.log('secret:' + process.env.FAUNADB_SERVER_SECRET)
   const client = new faunadb.Client({
     secret: process.env.FAUNADB_SERVER_SECRET
   }) 
